@@ -1,0 +1,36 @@
+﻿<div class="text-center">
+    <h1 class="display-4">5001</h1>
+    <input type="text" id="messageInput" /><br/>
+    <input type="button" id="sendButton" value="发送消息" /><br />
+    <ul id="messagesList"></ul>
+</div>
+<script src="signalr.js"></script>
+<script type="text/javascript">
+    var connection = new signalR.HubConnectionBuilder()
+        .withUrl("http://localhost:5001/hub?access_token=session:55656")
+        .withAutomaticReconnect() // 自动重链
+        .build();
+    document.getElementById("sendButton").disabled = true;
+    connection.on("MessageNotification", function (message) {
+        var li = document.createElement("li");
+        document.getElementById("messagesList").appendChild(li);
+ 
+        console.log(message);
+
+        li.textContent = `${message.title}${message.content}`;
+    });
+ 
+    connection.start().then(function () {
+        document.getElementById("sendButton").disabled = false;
+    }).catch(function (err) {
+        console.log(err);
+    });
+ 
+    document.getElementById("sendButton").addEventListener("click", function (event) {
+        var message = document.getElementById("messageInput").value;
+        connection.invoke("SendMessage", message).catch(function (err) {
+            return console.error(err.toString());
+        });
+        event.preventDefault();
+    });
+</script>

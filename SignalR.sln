@@ -1,0 +1,44 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{B81B0FB2-EBDA-4986-8F34-7B473E04FFF8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR.Redis.Host", "src\SignalR.Redis.Host\SignalR.Redis.Host.csproj", "{F22010FB-794A-49CD-AAD3-11C8E389DD76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalR.Redis", "src\SignalR.Redis\SignalR.Redis.csproj", "{51BD15FA-AF15-4070-9847-2AB2F7ED0389}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalR.Host", "src\SignalR.Host\SignalR.Host.csproj", "{6AEB014D-D552-4F7A-9056-6569E8B4C37B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F22010FB-794A-49CD-AAD3-11C8E389DD76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F22010FB-794A-49CD-AAD3-11C8E389DD76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F22010FB-794A-49CD-AAD3-11C8E389DD76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F22010FB-794A-49CD-AAD3-11C8E389DD76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51BD15FA-AF15-4070-9847-2AB2F7ED0389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51BD15FA-AF15-4070-9847-2AB2F7ED0389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51BD15FA-AF15-4070-9847-2AB2F7ED0389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51BD15FA-AF15-4070-9847-2AB2F7ED0389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6AEB014D-D552-4F7A-9056-6569E8B4C37B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6AEB014D-D552-4F7A-9056-6569E8B4C37B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6AEB014D-D552-4F7A-9056-6569E8B4C37B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6AEB014D-D552-4F7A-9056-6569E8B4C37B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F22010FB-794A-49CD-AAD3-11C8E389DD76} = {B81B0FB2-EBDA-4986-8F34-7B473E04FFF8}
+		{51BD15FA-AF15-4070-9847-2AB2F7ED0389} = {B81B0FB2-EBDA-4986-8F34-7B473E04FFF8}
+		{6AEB014D-D552-4F7A-9056-6569E8B4C37B} = {B81B0FB2-EBDA-4986-8F34-7B473E04FFF8}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A03B05DC-FDB3-43D0-A713-8E1272B6FC68}
+	EndGlobalSection
+EndGlobal
